@@ -13,9 +13,9 @@ services:
   wordpress:
     depends_on:
     - mysql_cluster
-    image: santosalves/wordpress_projeto04:1.1
-    volumes:
-    - wordpress_app:/var/www/html  
+    image: santosalves/wordpress_projeto04:latest
+    #volumes:
+    #- wordpress_app:/var/www/html  
     ports:
     - "8080:80"
     environment:
@@ -25,4 +25,4 @@ services:
       WORDPRESS_DB_NAME: projeto_integrador04
 volumes:
   mysql_dbdata:
-  wordpress_app:
+  #wordpress_app:
