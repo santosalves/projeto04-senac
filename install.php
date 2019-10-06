@@ -34,7 +34,7 @@ if ( false ) {
 #Automatizar instalacao
 #shell_exec('wp core install --url="192.168.0.155" --title="Projeto Integrador 04" --admin_user=admin --admin_password=senac@123 --admin_email=teste@gmail.com --allow-root');
 
-define( 'WP_INSTALLING', false);
+define( 'WP_INSTALLING', true);
 
 /** Load WordPress Bootstrap */
 require_once( dirname( dirname( __FILE__ ) ) . '/wp-load.php' );
