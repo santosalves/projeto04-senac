@@ -30,7 +30,7 @@ COPY wp-config.php /var/www/html/
 COPY install.php /var/www/html/wp-admin/
 
 VOLUME /var/www/html/
-EXPOSE 80
+EXPOSE 8080
 
 ENTRYPOINT ["/usr/sbin/apachectl"]
 CMD [ "-D", "FOREGROUND" ]
