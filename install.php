@@ -31,7 +31,10 @@ if ( false ) {
  * @var bool
  */
 
-define( 'WP_INSTALLING', true);
+#Automatizar instalacao
+shell_exec('wp core install --url="wordpress.projeto04.local" --title="Projeto Integrador 04" --admin_user=admin --admin_password=senac@123 --admin_email=teste@gmail.com --allow-root');
+
+define( 'WP_INSTALLING', false);
 
 /** Load WordPress Bootstrap */
 require_once( dirname( dirname( __FILE__ ) ) . '/wp-load.php' );

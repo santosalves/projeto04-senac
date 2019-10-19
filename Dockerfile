@@ -9,7 +9,7 @@ RUN export DEBIAN_FRONTEND=noninteractive \
     php7.2-mysql \
     php7.2 \
     libapache2-mod-php7.2 \
-    nano \
+    vim \
     curl \
     && apt-get autoclean \
     && rm -rf /var/www/html/* \
@@ -30,7 +30,7 @@ COPY wp-config.php /var/www/html/
 COPY install.php /var/www/html/wp-admin/
 
 VOLUME /var/www/html/
-EXPOSE 8080
+EXPOSE 80
 
 ENTRYPOINT ["/usr/sbin/apachectl"]
 CMD [ "-D", "FOREGROUND" ]
