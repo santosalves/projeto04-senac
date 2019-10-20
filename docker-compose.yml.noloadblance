@@ -13,20 +13,13 @@ services:
   wordpress:
     depends_on:
     - mysql_cluster
-    image: santosalves/wordpress_projeto04:1.1
+    image: santosalves/wordpress_projeto04:1.2
     ports:
-    - "8080:80"
+    - "80:80"
     environment:
       WORDPRESS_DB_HOST: mysql_cluster
       WORDPRESS_DB_USER: projeto04
       WORDPRESS_DB_PASSWORD: senac@123
       WORDPRESS_DB_NAME: projeto_integrador04
-  loadbalance:
-    depends_on:
-    - wordpress
-    image: santosalves/loadbalance_projeto04:latest
-    ports:
-    - "80:80"
-
 volumes:
   mysql_dbdata:

@@ -21,5 +21,12 @@ services:
       WORDPRESS_DB_USER: projeto04
       WORDPRESS_DB_PASSWORD: senac@123
       WORDPRESS_DB_NAME: projeto_integrador04
+  loadbalance:
+    depends_on:
+    - wordpress
+    image: santosalves/loadbalance_projeto04:latest
+    ports:
+    - "8080:8080"
+
 volumes:
   mysql_dbdata:

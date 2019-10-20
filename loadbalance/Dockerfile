@@ -7,4 +7,4 @@ RUN apt-get update \
 
 COPY nginx.conf /etc/nginx/nginx.conf
 WORKDIR /etc/nginx/
-EXPOSE 80
+EXPOSE 8080
