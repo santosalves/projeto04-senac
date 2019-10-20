@@ -15,7 +15,7 @@ services:
     - mysql_cluster
     image: santosalves/wordpress_projeto04:1.2
     ports:
-    - "80:80"
+    - "8080:8080"
     environment:
       WORDPRESS_DB_HOST: mysql_cluster
       WORDPRESS_DB_USER: projeto04
@@ -26,7 +26,7 @@ services:
     - wordpress
     image: santosalves/loadbalance_projeto04:latest
     ports:
-    - "8080:8080"
+    - "80:8000"
 
 volumes:
   mysql_dbdata:
