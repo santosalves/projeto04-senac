@@ -1,6 +1,6 @@
 version: "3.7"
 services:
-  mysql_cluster:
+  mysql:
     image: mysql:5.7
     volumes:
     - mysql_dbdata:/var/lib/mysql
@@ -12,12 +12,12 @@ services:
 
   wordpress:
     depends_on:
-    - mysql_cluster
+    - mysql
     image: santosalves/wordpress_projeto04:latest
     ports:
     - "80:80"
     environment:
-      WORDPRESS_DB_HOST: mysql_cluster
+      WORDPRESS_DB_HOST: mysql
       WORDPRESS_DB_USER: projeto04
       WORDPRESS_DB_PASSWORD: senac@123
       WORDPRESS_DB_NAME: projeto_integrador04
